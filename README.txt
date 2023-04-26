@@ -6,3 +6,6 @@
 
 
 Pierogi.pythonanywhere.com
+
+
+https://docs.google.com/presentation/d/1P2ogr4TSSqn-Xo3c2fGdSC5MRlFtylb9k-wBYKiuQUs/edit?usp=sharing
