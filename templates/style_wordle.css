@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans');
+
+body{
+    font-family: "Open Sans", sans-serif;
+    max-width: 500px;
+    margin: auto;
+}
+
+h1{
+    font-weight: 800;
+    text-align: center;
+}
+
+
+label{
+    display: block;
+    margin-top: 2em;
+    margin-bottom: 0.2em;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.formField{
+    width: 100%;
+    padding: 0.5em;
+}
+
+.formLetter{
+    width: 3em;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 1em 0px;
+}
+
+.buttonMy{
+    display: block;
+    margin: auto;
+    margin-top: 2em;
+    padding: 0.5em;
+    width: 50%;
+
+    color: black;
+    background-color: #d3d6da;
+    border: none;
+}

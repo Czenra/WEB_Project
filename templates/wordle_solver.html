@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Wordle Solver</title>
+	<link rel="stylesheet" href="style_wordle.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Wordle Solver</h1>
+
+		<p><i>To help narrow it down enter as much information as you can. If you don't know something just leave the field empty. English language only.</i></p>
+
+		<form method="POST">
+			<label> Letters to exclude (<span style="padding: 0.1em 0.5em; color: white; background-color: #787c7e;">dark grey</span>):</label>
+			<input type="text" name="letEX" placeholder="abc..." class="formField" pattern="^[a-zA-Z]+$" title="Please enter all letters together, no spaces, no punctuation marks.">
+
+			<label>Places of <span style="padding: 0.1em 0.5em; color: white; background-color: #6aaa64;">green</span> letters:</label>
+			<input type="text" name="l1" class="formLetter" placeholder="_" pattern="[A-Za-z]" title="Please enter only one letter.">
+			<input type="text" name="l2" class="formLetter" placeholder="_" pattern="[A-Za-z]" title="Please enter only one letter.">
+			<input type="text" name="l3" class="formLetter" placeholder="_" pattern="[A-Za-z]" title="Please enter only one letter.">
+			<input type="text" name="l4" class="formLetter" placeholder="_" pattern="[A-Za-z]" title="Please enter only one letter.">
+			<input type="text" name="l5" class="formLetter" placeholder="_" pattern="[A-Za-z]" title="Please enter only one letter.">
+
+			<label>Places of <span style="padding: 0.1em 0.5em; color: white; background-color: #c9b458;">yellow</span> letters:</label>
+			<input type="text" name="y1" class="formLetter" placeholder="_ _" pattern="^[a-zA-Z]+$" title="Please enter all yellow letters for this postition together, no spaces, no punctuation marks.">
+			<input type="text" name="y2" class="formLetter" placeholder="_ _" pattern="^[a-zA-Z]+$" title="Please enter all yellow letters for this postition together, no spaces, no punctuation marks.">
+			<input type="text" name="y3" class="formLetter" placeholder="_ _" pattern="^[a-zA-Z]+$" title="Please enter all yellow letters for this postition together, no spaces, no punctuation marks.">
+			<input type="text" name="y4" class="formLetter" placeholder="_ _" pattern="^[a-zA-Z]+$" title="Please enter all yellow letters for this postition together, no spaces, no punctuation marks.">
+			<input type="text" name="y5" class="formLetter" placeholder="_ _" pattern="^[a-zA-Z]+$" title="Please enter all yellow letters for this postition together, no spaces, no punctuation marks.">
+
+			<input type="submit" value="Solve!" name="" class="buttonMy">
+
+
+			<label> <h3>Possible solutions:</h3></label>
+			{{solution | safe}}
+		</form>
+	</div>
+
+	<div style="margin-top:100px"></div>
+</body>
+</html>
