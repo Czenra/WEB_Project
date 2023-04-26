@@ -15,7 +15,7 @@ def index():
     return render_template("index.html")
 
 
-@app.route("/wordle_solver", methods=["GET", "POST"])
+@app.route("/wordle_solver.html", methods=["GET", "POST"])
 def wordle_solver():
     if request.method == "GET":
         return render_template("wordle_solver.html")
@@ -30,6 +30,6 @@ def wordle_solver():
                                solution=solve.solve_wordle(word_list, l_ex, l_pattern, y_pattern))
 
 
-@app.route("/known_words")
+@app.route("/known_words.html")
 def known_words():
     return render_template("known_words.html")
