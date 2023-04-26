@@ -5,8 +5,8 @@ import os
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'very_secret_super_wordle_key'
 
-data_path = os.path.join(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data'), 'words.txt')
-with open(data_path, 'r') as f:
+#data_path = os.path.join(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data'), 'words.txt')
+with open('data/words.txt', 'r') as f:
     word_list = f.read().splitlines()
 
 
