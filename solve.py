@@ -38,6 +38,6 @@ def solve_wordle(word_list, l_ex, l_pattern, y_pattern):
                 solution = solution + w + '<br>'
 
     if solution == '':
-        return 'Sorry! We could not find a solution!'
+        return 'Sorry! We could not find a solution.'
 
     return solution

@@ -5,9 +5,17 @@ import os
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'very_secret_super_wordle_key'
 
-#data_path = os.path.join(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data'), 'words.txt')
-with open('data/words.txt', 'r') as f:
-    word_list = f.read().splitlines()
+data_path = os.path.join(os.path.join(os.path.abspath(os.path.dirname(__file__)), 'data'), 'words.txt')
+with open(data_path, 'r') as f:
+    word_list_1 = f.read().splitlines()
+    word_list = []
+    for w in word_list_1:
+        if " " in w:
+            w.split(' ')
+            for elem in w:
+                word_list.append(elem)
+        else:
+            word_list.append(w)
 
 
 @app.route("/")
