@@ -28,3 +28,8 @@ def wordle_solver():
                      request.form.get("y5")]
         return render_template("wordle_solver.html",
                                solution=solver.solve_wordle(word_list, l_ex, l_pattern, y_pattern))
+
+
+@app.route("/known_words")
+def known_words():
+    return render_template("known_words.html")
