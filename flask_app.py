@@ -1,5 +1,5 @@
 from flask import Flask, render_template, request
-import solver
+import solve
 import os
 
 app = Flask(__name__)
@@ -27,7 +27,7 @@ def wordle_solver():
         y_pattern = [request.form.get("y1"), request.form.get("y2"), request.form.get("y3"), request.form.get("y4"),
                      request.form.get("y5")]
         return render_template("wordle_solver.html",
-                               solution=solver.solve_wordle(word_list, l_ex, l_pattern, y_pattern))
+                               solution=solve.solve_wordle(word_list, l_ex, l_pattern, y_pattern))
 
 
 @app.route("/known_words")
