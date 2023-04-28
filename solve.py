@@ -1,4 +1,5 @@
 import re
+import write_down
 
 
 def check_letters(w, letters_to_IN, letter_to_EX):
@@ -31,13 +32,19 @@ def solve_wordle(word_list, l_ex, l_pattern, y_pattern):
     l_in_clean = ''.join(l_pattern).lower() + ''.join(y_pattern).lower()
     l_ex_clean = l_ex.lower()
 
+    counter = 0
+
     for w in word_list:
         w = w.lower()
         if check_letters(w, l_in_clean, l_ex_clean):
             if re.fullmatch(pattern, w):
                 solution = solution + w + '<br>'
+                counter += 1
 
     if solution == '':
         return 'Sorry! We could not find a solution.'
+
+    if counter == 1:
+        write_down.write_down_a_word(solution)
 
     return solution

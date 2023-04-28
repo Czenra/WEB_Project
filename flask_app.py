@@ -1,6 +1,7 @@
 from flask import Flask, render_template, request
 import solve
 import os
+import write_down
 
 app = Flask(__name__)
 app.config['SECRET_KEY'] = 'very_secret_super_wordle_key'
@@ -40,4 +41,9 @@ def wordle_solver():
 
 @app.route("/known_words.html")
 def known_words():
-    return render_template("known_words.html")
+    list_of_words = write_down.bring_up_the_list()
+    return render_template("known_words.html", words=list_of_words)
+
+
+if __name__ == '__main__':
+    app.run()

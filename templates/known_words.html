@@ -11,6 +11,11 @@
 	<div class="container_main">
 		<h2>Already found words:</h2>
 		<br>
+		<ul>
+			{% for word in words %}
+			<li>{{ word }}</li>
+			{% endfor %}
+		</ul>
 	</div>
 </body>
 </html>
